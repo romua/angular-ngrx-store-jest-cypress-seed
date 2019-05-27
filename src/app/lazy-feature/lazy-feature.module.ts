@@ -10,7 +10,9 @@ import { reducer } from './store/reducers/lazy-feature.reducer';
 
 
 @NgModule({
-  declarations: [LazyFeatureHomeComponent],
+  declarations: [
+    LazyFeatureHomeComponent
+  ],
   imports: [
     CommonModule,
     LazyFeatureRoutingModule,
