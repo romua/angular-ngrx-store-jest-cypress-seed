@@ -1,0 +1,17 @@
+<div *ngIf="error$ | async as error">
+    {{error}}
+</div>
+
+<p>
+    feature-one-home works!
+</p>
+<div *ngIf="users$ | async as users; else spinner" data-test="users-list">
+    <div *ngFor="let user of users">
+        {{user?.login | json}}
+    </div>
+</div>
+
+
+<ng-template #spinner>
+    Loading...
+</ng-template>
