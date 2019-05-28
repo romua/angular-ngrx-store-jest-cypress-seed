@@ -6,7 +6,7 @@
     feature-one-home works!
 </p>
 <div *ngIf="users$ | async as users; else spinner" data-test="users-list">
-    <div *ngFor="let user of users">
+    <div *ngFor="let user of users" data-test="users-item">
         {{user?.login | json}}
     </div>
 </div>

@@ -7,7 +7,8 @@
     "build": "ng build --aot",
     "test": "ng test --watch",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "cy": "cypress open",
+    "e2e": "concurrently --kill-others \"ng serve --aot\" \"cypress open\""
   },
   "private": true,
   "dependencies": {
@@ -42,15 +43,14 @@
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
     "@ngrx/schematics": "^7.4.0",
-    "@types/jasmine": "~2.8.8",
-    "@types/jasminewd2": "~2.0.3",
     "@types/jest": "^24.0.13",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "concurrently": "^4.1.0",
+    "cypress": "^3.3.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "jest": "^24.8.0",
-    "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
